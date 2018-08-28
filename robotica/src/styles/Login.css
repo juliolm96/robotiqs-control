@@ -1,0 +1,32 @@
+@media only screen and (min-width: 768px) {
+
+  .login-form {
+    background-color: #FAFAFA;
+    border: 2px solid #D8D8D8;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    margin: 10% 25% 10%;
+  }
+
+  .signup-form {
+    background-color: #FAFAFA;
+    border: 2px solid #D8D8D8;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    margin: 0% 25% 10%;
+  }
+
+  .form-child {
+    margin: 0% 15.58% 0%;
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .login-form {
+      margin-top: 8%;
+    }
+}

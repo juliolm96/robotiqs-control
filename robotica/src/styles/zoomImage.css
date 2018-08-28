@@ -1,0 +1,98 @@
+.zoominImage {
+    border-radius: 5px !important;
+    cursor: zoom-in;
+    transition: 0.3s;
+}
+
+.zoominImage:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal-zoominImage {
+
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 101; /* Sit on top */
+    padding-top: 40px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content-zoominImage {
+    margin: auto;
+    display: block;
+    width: 80%;
+    /*border-style: dashed;
+    border-color: #eeeeee;
+    border-width: 5px;
+    border-radius: 5%; */
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption-zoominImage {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 15px 0;
+    height: 40px;
+}
+
+/* Add Animation */
+.modal-content-zoominImage, #caption-zoominImage {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close-zoominImage {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-zoominImage:hover,
+.close-zoominImage:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) and (min-height: 450px) {
+    .modal-content-zoominImage {
+        width: 98%;
+        max-height: 88%;
+    }
+}
+
+@media only screen and (max-width: 880px) and (max-height: 449px) {
+    .modal-content-zoominImage {
+        width: 98%;
+        max-height: 65%;
+    }
+}

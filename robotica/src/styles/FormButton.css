@@ -1,0 +1,22 @@
+
+.FormBoton{
+  padding: 10px 35px;
+  overflow:hidden;
+}
+
+.FormBoton:before {
+ font-family: FontAwesome;
+ content:"\f064";
+ position: relative;
+ top: 0px;
+ left: -100%;
+ transition: all 200ms ease;
+}
+
+.FormBoton:hover:before {
+ left: -40%;
+}
+
+.FormBoton>text{
+    font-size: 2em;
+}

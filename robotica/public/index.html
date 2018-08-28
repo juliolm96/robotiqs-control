@@ -1,0 +1,208 @@
+<!doctype html>
+<html class="ie ie6" lang="es"/>
+<html class="ie ie7" lang="es"/>
+<html class="ie ie8" lang="es"/>
+<html lang="es"/>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>ROBOTIQs</title>
+	<meta name="description" content="Plataforma Web de instrucciones basadas en LEGO">
+	<meta name="author" content="Julio-ichidax, liliana, ROBOTIQs">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- NODEjs Manifest link -->
+	<link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+
+	<!--THEME STYLES-->
+	<!--START CSS-->
+	<link rel="stylesheet" href="%PUBLIC_URL%/resources/css/nicdark_style.css"> <!--style-->
+	<link rel="stylesheet" href="%PUBLIC_URL%/resources/css/nicdark_responsive.css"> <!--nicdark_responsive-->
+	<!--revslider-->
+	<link rel="stylesheet" href="%PUBLIC_URL%/resources/css/revslider/settings.css"> <!--revslider-->
+	<!--END CSS-->
+
+	<!--google fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> <!-- font-family: 'Montserrat', sans-serif; -->
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'> <!-- font-family: 'Raleway', sans-serif; -->
+	<link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'> <!-- font-family: 'Montez', cursive; -->
+
+	<!--FAVICONS-->
+	<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+	<link rel="apple-touch-icon" href="%PUBLIC_URL%/resources/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="%PUBLIC_URL%/resources/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="%PUBLIC_URL%/resources/img/favicon/apple-touch-icon-114x114.png">
+	<!--END FAVICONS-->
+
+	<!--END THEME STYLES-->
+
+</head>
+<body id="start_nicdark_framework" class="nicdark_boxed_pattern">
+	<div class="nicdark_site">
+		 <div class="nicdark_site_boxed nicdark_clearfix">
+			<div class="nicdark_overlay"></div>
+			<!-- BEGIN OF MAIN COMPONENT DIV-->
+			<div id="root">
+			</div>
+			<!-- END OF MAIN COMPONENT DIV -->
+		</div>
+	</div>
+	<!-- SCRIPTS AND COMPLEMENTS -->
+
+	<!--main-->
+	<script src="%PUBLIC_URL%/resources/js/main/jquery.min.js"></script> <!--Jquery-->
+	<script src="%PUBLIC_URL%/resources/js/main/jquery-ui.js"></script> <!--Jquery UI-->
+	<script src="%PUBLIC_URL%/resources/js/main/excanvas.js"></script> <!--canvas need for ie-->
+
+	<!--plugins-->
+	<script src="%PUBLIC_URL%/resources/js/plugins/revslider/jquery.themepunch.tools.min.js"></script> <!--revslider-->
+	<script src="%PUBLIC_URL%/resources/js/plugins/revslider/jquery.themepunch.revolution.min.js"></script> <!--revslider-->
+
+	<!--menu-->
+	<script src="%PUBLIC_URL%/resources/js/plugins/menu/superfish.min.js"></script> <!--superfish-->
+	<script src="%PUBLIC_URL%/resources/js/plugins/menu/tinynav.min.js"></script> <!--tinynav-->
+
+	<!--other-->
+	<script src="%PUBLIC_URL%/resources/js/plugins/isotope/isotope.pkgd.min.js"></script> <!--isotope-->
+	<script src="%PUBLIC_URL%/resources/js/plugins/mpopup/jquery.magnific-popup.min.js"></script> <!--mpopup-->
+	<script src="%PUBLIC_URL%/resources/js/plugins/scroolto/scroolto.js"></script> <!--Scrool To-->
+	<script src="%PUBLIC_URL%/resources/js/plugins/nicescrool/jquery.nicescroll.min.js"></script> <!--Nice Scroll-->
+	<script src="%PUBLIC_URL%/resources/js/plugins/inview/jquery.inview.min.js"></script> <!--inview-->
+	<script src="%PUBLIC_URL%/resources/js/plugins/parallax/jquery.parallax-1.1.3.js"></script> <!--parallax-->
+	<script src="%PUBLIC_URL%/resources/js/plugins/countto/jquery.countTo.js"></script> <!--jquery.countTo-->
+	<script src="%PUBLIC_URL%/resources/js/plugins/countdown/jquery.countdown.js"></script> <!--countdown-->
+
+	<!--settings-->
+	<script src="%PUBLIC_URL%/resources/js/settings.js"></script> <!--settings-->
+	<!--custom js-->
+	<script type="text/javascript">
+	jQuery(document).ready(function() {
+
+		//START SLIDE
+		jQuery('.nicdark_slide1').show().revolution(
+			{
+				dottedOverlay:"none",
+				delay:16000,
+				startwidth:1170,
+				startheight:650,
+				hideThumbs:200,
+
+				thumbWidth:100,
+				thumbHeight:50,
+				thumbAmount:5,
+
+				navigationType:"none",
+				navigationArrows:"solo",
+				navigationStyle:"preview2",
+
+				touchenabled:"on",
+				onHoverStop:"on",
+
+				swipe_velocity: 0.7,
+				swipe_min_touches: 1,
+				swipe_max_touches: 1,
+				drag_block_vertical: false,
+
+				parallax:"mouse",
+				parallaxBgFreeze:"on",
+				parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+
+				keyboardNavigation:"off",
+
+				navigationHAlign:"center",
+				navigationVAlign:"bottom",
+				navigationHOffset:0,
+				navigationVOffset:20,
+
+				soloArrowLeftHalign:"left",
+				soloArrowLeftValign:"center",
+				soloArrowLeftHOffset:20,
+				soloArrowLeftVOffset:0,
+
+				soloArrowRightHalign:"right",
+				soloArrowRightValign:"center",
+				soloArrowRightHOffset:20,
+				soloArrowRightVOffset:0,
+
+				shadow:0,
+				fullWidth:"on",
+				fullScreen:"off",
+
+				spinner:"spinner4",
+
+				stopLoop:"off",
+				stopAfterLoops:-1,
+				stopAtSlide:-1,
+
+				shuffle:"off",
+
+				autoHeight:"off",
+				forceFullWidth:"off",
+
+				hideTimerBar: "on",
+
+				hideThumbsOnMobile:"off",
+				hideNavDelayOnMobile:1500,
+				hideBulletsOnMobile:"off",
+				hideArrowsOnMobile:"off",
+				hideThumbsUnderResolution:0,
+
+				hideSliderAtLimit:0,
+				hideCaptionAtLimit:0,
+				hideAllCaptionAtLilmit:0,
+				startWithSlide:0,
+				videoJsPath:"rs-plugin/videojs/",
+				fullScreenOffsetContainer: ""
+			});
+			//END SLIDE
+
+			//START PARALLAX SECTIONS
+			$('#nicdark_parallax_big_image').parallax("50%", 0.3);
+			$('#nicdark_parallax_2_btns').parallax("50%", 0.3);
+			$('#nicdark_parallax_countdown').parallax("50%", 0.3);
+			$('#nicdark_parallax_counter').parallax("50%", 0.3);
+			//END PARALLAX SECTIONS
+
+			//START COUNTDOWN GRID SECTION
+			//variables
+			var endDate = "May 26, 2016 20:00:00";
+			var grid = "grid_3";
+			//insert the class nicdark_displaynone in the var if you wnat to hide the visualization
+			var display_years = "nicdark_displaynone";
+			var display_days = "";
+			var display_hours = "";
+			var display_minutes = "";
+			var display_seconds = "";
+			//call
+			$(".nicdark_countdown").countdown({
+				date: endDate,
+				render: function(data) {
+					$(this.el).html("<div class=\"grid "+ grid +" "+ display_years +" \"><div class=\"nicdark_textevidence center\"><h1 class=\"subtitle white extrasize\">"+ this.leadingZeros(data.years, 4) +"</h1><div class=\"nicdark_space20\"></div><a class=\"nicdark_btn nicdark_bg_blue small nicdark_shadow nicdark_radius white\">YEARS</a><div class=\"nicdark_space5\"></div></div></div><div class=\"grid "+ grid +" "+ display_days +"  \"><div class=\"nicdark_textevidence center\"><h1 class=\"subtitle white extrasize\">"+ this.leadingZeros(data.days, 3) +"</h1><div class=\"nicdark_space20\"></div><a class=\"nicdark_btn nicdark_bg_blue small nicdark_shadow nicdark_radius white\">DAYS</a><div class=\"nicdark_space5\"></div></div></div><div class=\"grid "+ grid +" "+ display_hours +"  \"><div class=\"nicdark_textevidence center\"><h1 class=\"subtitle white extrasize\">"+ this.leadingZeros(data.hours, 2) +"</h1><div class=\"nicdark_space20\"></div><a class=\"nicdark_btn nicdark_bg_yellow small nicdark_shadow nicdark_radius white\">HOURS</a><div class=\"nicdark_space5\"></div></div></div><div class=\"grid "+ grid +" "+ display_minutes +"  \"><div class=\"nicdark_textevidence center\"><h1 class=\"subtitle white extrasize\">"+ this.leadingZeros(data.min, 2) +"</h1><div class=\"nicdark_space20\"></div><a class=\"nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white\">MINUTES</a><div class=\"nicdark_space5\"></div></div></div><div class=\"grid "+ grid +" "+ display_seconds +"  \"><div class=\"nicdark_textevidence center\"><h1 class=\"subtitle white extrasize\">"+ this.leadingZeros(data.sec, 2) +"</h1><div class=\"nicdark_space20\"></div><a class=\"nicdark_btn nicdark_bg_violet small nicdark_shadow nicdark_radius white\">SECONDS</a><div class=\"nicdark_space5\"></div></div></div>");
+				}
+			});
+			//END COUNTDOWN GRID SECTION
+
+		});
+		</script>
+		<!--custom js-->
+
+		<!-- Hide navbar Script -->
+		<script>
+			window.onscroll = function() {
+			var currentScrollPos = window.pageYOffset;
+			if (window.innerWidth > 1200) {
+				  if ( currentScrollPos < 35) {
+				    document.getElementById("navMenu").style.top = "0px";
+				  } else {
+				    document.getElementById("navMenu").style.top = "-35px";
+				  }
+				}
+			}
+		</script>
+		<!-- END hide navbar Script -->
+
+		<!-- END OF SCRIPTS AND COMPLEMENTS -->
+
+	</body>
+	</html>

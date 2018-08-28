@@ -1,0 +1,317 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media only screen and (min-width: 768px){
+  .modelo-image {
+    border-radius: 20%;
+    width: 40%;
+    height: auto;
+    border: 2px solid;
+    border-color: lightblue;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .modelo-image {
+    border-radius: 20%;
+    width: 150px;
+    height: auto;
+    border: 2px solid;
+    border-color: lightblue;
+  }
+}
+
+.producto-img-preview {
+  margin-top: 10px;
+  margin-right: 15px;
+  border-radius: 10px;
+  width: 80%;
+  height: auto;
+}
+
+.undecored-list {
+  list-style:none;
+}
+
+.textarea {
+  resize: none;
+}
+
+.tn-title {
+  font-size: 22px;
+  color: #7A7A7A;
+}
+
+.tn-group-title {
+  color: #8E8E8E;
+  font-size: 20px;
+}
+
+.tn-first-level {
+  color: #8E8E8E;
+  font-size: 18px;
+}
+
+.tn-second-level {
+  color: #8E8E8E;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 959px) {
+
+  .menu-separator {
+    height: 140px;
+    background: #FFF;
+    width: auto;
+  }
+
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+
+  .menu-separator {
+    height: 85px;
+    background: #FFF;
+    width: auto;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .menu-separator {
+    height: 115px;
+    background: #FFF;
+    width: auto;
+  }
+
+}
+
+.fileInput {
+	cursor: pointer;
+  color: #000;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 0px solid #DDD;
+  color: #FFF;
+  background-color: #6fc191;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor:pointer;
+}
+
+.btn2 {
+  border: 0px solid #DDD;
+  color: #FFF;
+  background-color: #ec774b;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor:pointer;
+}
+
+.btn3 {
+  border: 0px solid #DDD;
+  color: #FFF;
+  background-color: #6fc4d9;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 17px;
+}
+
+.btn-bluedark {
+  border: 0px solid #DDD;
+  color: #FFF;
+  background-color: #6fc4d9;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 17px;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+hr.stylished {
+    height: 3px;
+    border: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/******************* RADIO BUTTONS STYLISHED ********************/
+
+/* Customize the label (the container) */
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Create a custom radio button */
+.radio-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .radio-checkmark {
+  background-color: #c389ce;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .radio-checkmark {
+  background-color: #ac7ab5;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .radio-checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .radio-checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/******************** END OF RADIO BUTTONS ********************/
+
+/***************** MODAL START *********************/
+
+#modal-hs {
+   visibility: hidden;
+   opacity: 0;
+   margin-top: -300px;
+}
+
+#modal-hs:target {
+   visibility:visible;
+   opacity: 1;
+   background-color: rgba(0,0,0,0.8);
+   position: fixed;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+   margin:0;
+   z-index: 999;
+   transition:all 1s;
+}
+
+.modal-hs-contenedor {
+   position: relative;
+   margin:7% auto;
+   padding:30px 50px;
+   background-color: #fafafa;
+   color:#333;
+   border-radius: 3px;
+   width:70%;
+   height: 70%;
+   overflow: scroll;
+}
+
+a.modal-hs-cerrar {
+   position: absolute;
+   top:3px;
+   right:3px;
+   background-color: #A00;
+   padding:7px 10px;
+   font-size: 20px;
+   text-decoration: none;
+   line-height: 1;
+   color:#fff;
+   border-radius: 7px;
+}
+
+@media only screen and (min-width: 768px) {
+  .lily-right-button {
+    margin-top: 2.9em;
+    margin-left: 0.5em;
+    width: 1.3em;
+    transition: width 0.2s, margin-left 0.2s;
+  }
+
+  .lily-right-button:hover {
+    cursor: pointer;
+    margin-left: 0.6em;
+    width: 1.1em;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  .lily-right-button {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}
+
+/***************** MODAL END ***********************/
