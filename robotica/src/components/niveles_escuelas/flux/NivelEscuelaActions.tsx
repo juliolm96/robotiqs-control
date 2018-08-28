@@ -46,7 +46,7 @@ class NivelEscuelaActions {
         }).catch(() => {
           alert('No se ha podido cargar uno o más recursos(ESCUELAS)\n' +
             'Compruebe su conexión  al la red');
-          window.location.href = 'http://localhost:3000/';
+          window.location.href = '/';
         });
   }
 
@@ -77,7 +77,7 @@ class NivelEscuelaActions {
         }).catch(() => {
           alert('No se ha podido cargar uno o más recursos(NIVELES_ESCUELAS)\n' +
             'Compruebe su conexión  al la red');
-          window.location.href = 'http://localhost:3000/';
+          window.location.href = '/';
         });
   }
 

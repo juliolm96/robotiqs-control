@@ -50,7 +50,7 @@ class ServiciosActions {
       }
     ).catch((error) => {
       alert('ERROR AL CARGAR LOS PAQUETES');
-      location.href = '/';
+      window.location.href = '/';
     });
   }
 

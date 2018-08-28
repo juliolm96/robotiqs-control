@@ -74,7 +74,7 @@ class PaquetesStore extends EventEmitter {
         function(response: any) {
           if (response.status > 199 && response.status < 300) {
             alert('EL REGISTRO SE HA INSERTADO EXITOSAMENTE');
-            window.location.href = 'http://localhost:3000/';
+            window.location.href = '/';
           } else {
             alert('SUCEDIÓ UN ERROR AL REGISTRAR LOS DATOS');
             return response;
@@ -96,7 +96,7 @@ class PaquetesStore extends EventEmitter {
         function(response: any) {
           if (response.status > 199 && response.status < 300) {
             alert('EL REGISTRO SE HA ACTUALIZADO EXITOSAMENTE');
-            window.location.href = 'http://localhost:3000/';
+            window.location.href = '/';
           } else {
             alert('SUCEDIÓ UN ERROR AL ACTUALIZAR');
             return response;
