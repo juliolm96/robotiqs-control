@@ -30,7 +30,7 @@ class ConceptoPagoStore extends EventEmitter {
       function(response: any) {
         if (response.status > 199 && response.status < 300) {
           alert('EL REGISTRO SE HA INSERTADO EXITOSAMENTE');
-          window.location.href = 'http://localhost:3000/';
+          window.location.href = '/';
         }
         return response;
     }).catch((error) => {
@@ -43,7 +43,7 @@ class ConceptoPagoStore extends EventEmitter {
       function(response: any) {
         if (response.status > 199 && response.status < 300) {
           alert('EL REGISTRO SE HA INSERTADO EXITOSAMENTE');
-          window.location.href = 'http://localhost:3000/';
+          window.location.href = '/';
         }
         return response;
     }).catch((error) => {

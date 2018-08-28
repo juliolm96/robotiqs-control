@@ -1,5 +1,5 @@
 import * as React  from 'react';
-import * as jQuery from 'jquery';
+import * as $ from 'jquery';
 
 // Declaración de los tipos para las propiedades recibidas desde el elemento padre
 interface PropTypes {
@@ -62,7 +62,7 @@ class FormInput extends React.Component<PropTypes, MyState> {
   componentDidMount() {
 
     if (this.props.inputType === 'date') {
-      jQuery('.nicdark_calendar').datepicker({ dateFormat: 'yy-mm-dd' });
+      $('.nicdark_calendar').datepicker({ dateFormat: 'yy-mm-dd' });
     }
 
     if (this.props.inputType === 'number' && this.state.inputType !== 'text') {

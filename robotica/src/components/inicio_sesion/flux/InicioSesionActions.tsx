@@ -1,14 +1,14 @@
 import InicioSesionDispatcher from './InicioSesionDispatcher';
 // import * as Interfaces from '../../../constantes/Interfaces';
 import * as HTTP from '../../../services/HTTP';
-// import { CONST } from '../../../constantes/CONST';
+import { CONST } from '../../../constantes/CONST';
 import * as Interfaces from '../../../constantes/Interfaces';
 
 class InicioSesionActions {
 
     iniciarSesion(objInicioSesion: {email: string, password: string}) {
 
-      HTTP.getWithObject('http://localhost:8080/api/auth/signin', objInicioSesion).then(
+      HTTP.getWithObject(CONST.BACKEND_ROOT + 'api/auth/signin', objInicioSesion).then(
 
         (response: Interfaces.SessionObject) => {
 
@@ -45,7 +45,7 @@ class InicioSesionActions {
 
     registrarUsuario(objRegistro: Interfaces.registroObject) {
 
-      HTTP.post('http://localhost:8080/api/auth/signup', objRegistro).then(
+      HTTP.post(CONST.BACKEND_ROOT + '/api/auth/signup', objRegistro).then(
         (response: any) => {
           if (response.status === 201) {
             alert('Se ha registrado exitosamente');
