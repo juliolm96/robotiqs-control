@@ -1,3 +1,18 @@
 {
-
+  "extends": [],
+  "defaultSeverity": "warning",
+  "rules": {
+    "ordered-imports": false,
+    "import-sources-order": "any",
+    "named-imports-order": "any"
+  },
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js",
+      "public/resources/**/*.js"
+    ]
+  },
+  "interface-name": [true, "never-prefix"]
 }
