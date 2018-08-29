@@ -1,5 +1,5 @@
 import * as React  from 'react';
-import * as $ from 'jquery';
+// import * as $ from 'jquery';
 
 // Declaración de los tipos para las propiedades recibidas desde el elemento padre
 interface PropTypes {
@@ -62,7 +62,7 @@ class FormInput extends React.Component<PropTypes, MyState> {
   componentDidMount() {
 
     if (this.props.inputType === 'date') {
-      $('.nicdark_calendar').datepicker({ dateFormat: 'yy-mm-dd' });
+      this.setState({inputType: 'date'});
     }
 
     if (this.props.inputType === 'number' && this.state.inputType !== 'text') {
@@ -102,6 +102,7 @@ class FormInput extends React.Component<PropTypes, MyState> {
   }
 
   render(): JSX.Element {
+    if (this.state.inputType !== 'date') {
       return(
         <div className="nicdark_focus nicdark_width_percentage70">
             <div className="nicdark_space20"/>
@@ -120,6 +121,27 @@ class FormInput extends React.Component<PropTypes, MyState> {
             <div style={{ height: '20px'}} className="nicdark_width_percentage70 nicdark_focus"/>
         </div>
       );
+    }
+    else {
+      return (
+        <div className="nicdark_focus nicdark_width_percentage70">
+            <div className="nicdark_space20"/>
+            <h3 className="subtitle greydark">{this.props.textoLabel}</h3>
+            <div className="nicdark_space10"/>
+            <input
+                type="date"
+                required={true}
+                className="nicdark_bg_grey2 nicdark_radius nicdark_shadow"
+                onChange={this.onChange}
+                disabled={this.props.disabled}
+                value={this.state.value}
+                style={{width: '100%', fontSize: '1.7em', color: 'grey', border: 0, height: '40px'}}
+                ref={(inp) => this.input = inp}
+              />
+              <div style={{ height: '20px'}} className="nicdark_width_percentage70 nicdark_focus"/>
+            </div>
+          );
+    }
   }
 
 }
