@@ -40,7 +40,7 @@
 </head>
 <body id="start_nicdark_framework" class="nicdark_boxed_pattern">
 	<div class="nicdark_site">
-		 <div class="nicdark_site_boxed nicdark_clearfix">
+		 <div class="nicdark_site_fullwidth nicdark_clearfix">
 			<div class="nicdark_overlay"></div>
 			<!-- BEGIN OF MAIN COMPONENT DIV-->
 			<div id="root">
@@ -190,14 +190,12 @@
 		<!-- Hide navbar Script -->
 		<script>
 			window.onscroll = function() {
-			var currentScrollPos = window.pageYOffset;
-			if (window.innerWidth > 1200) {
-				  if ( currentScrollPos < 35) {
-				    document.getElementById("navMenu").style.top = "0px";
-				  } else {
-				    document.getElementById("navMenu").style.top = "-35px";
-				  }
-				}
+				var currentScrollPos = window.pageYOffset;
+			  if ( currentScrollPos < 35) {
+			    document.getElementById("navMenu").style.top = "0px";
+			  } else {
+			    document.getElementById("navMenu").style.top = "-35px";
+			  }
 			}
 		</script>
 		<!-- END hide navbar Script -->

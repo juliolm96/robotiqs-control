@@ -1,4 +1,4 @@
-import * as React from 'react';
+﻿import * as React from 'react';
 import '../../App.css';
 
 interface MyState {
@@ -99,7 +99,11 @@ class AdminNavBar extends React.Component<{}, MyState> {
                         value="/miembros/actualizar"
                       >-- Actualizar
                       </option>
-
+                      <option
+                        className="tn-second-level"
+                        value="/miembros/consultar"
+                      >-- Consultar
+                      </option>
                       <option className="tn-first-level" disabled={true}>- Sets</option>
                       <option
                         className="tn-second-level"
@@ -251,6 +255,7 @@ class AdminNavBar extends React.Component<{}, MyState> {
                             <ul className="sub-menu">
                               <li><a href="/miembros/registrar">Registrar Socio</a></li>
                               <li><a href="/miembros/actualizar">Actualizar Socio</a></li>
+			      <li><a href="/miembros/consultar">Consultar Socio</a></li>
                               <li><a href="/escuela/registrar">Registrar Escuela</a></li>
                               <li><a href="/nivel-escuela/registrar">Asignar nivel educativo (Escuela)</a></li>
                               <li><a href="/escuela/actualizar">Actualizar Escuela</a></li>
